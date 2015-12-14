@@ -1,0 +1,128 @@
+<?xml version='1.0'?>
+
+<project>
+        <name>GMapping</name>
+
+        <author>
+		<name>Giorgio Grisetti</name>
+		<url>http://www.informatik.uni-freiburg.de/~grisetti</url>
+	</author>
+        <author>
+		<name>Cyrill Stachniss</name>
+		<url>http://www.informatik.uni-freiburg.de/~stachnis</url>
+	</author>
+        <author>
+		<name>Wolfram Burgard</name>
+		<url>http://www.informatik.uni-freiburg.de/~burgard</url>
+	</author>
+
+        <url>http://www.informatik.uni-freiburg.de/~stachnis/research/rbpfmapper/</url>
+
+        <briefdescription>
+	 GMapping is a highly efficient Rao-Blackwellized particle filer to learn
+	 grid maps from laser range data.
+	</briefdescription>
+
+        <description>
+	 Recently Rao-Blackwellized particle filters have been
+	 introduced as effective means to solve the simultaneous
+	 localization and mapping (SLAM) problem. This approach uses a
+	 particle filter in which each particle carries an individual
+	 map of the environment. Accordingly, a key question is how to
+	 reduce the number of particles. We present adaptive
+	 techniques to reduce the number of particles in a Rao-
+	 Blackwellized particle filter for learning grid maps. We
+	 propose an approach to compute an accurate proposal
+	 distribution taking into account not only the movement of the
+	 robot but also the most recent observation. This drastically
+	 decrease the uncertainty about the robot's pose in the
+	 prediction step of the filter. Furthermore, we apply an
+	 approach to selectively carry out re-sampling operations
+	 which seriously reduces the problem of particle
+	 depletion. 
+	</description>
+
+        <requirement>
+	Linux/Unix, GCC 3.3/4.0.x
+	</requirement>
+        <requirement>
+	CARMEN (latest version)
+	</requirement>
+	<requirement>
+	  Quick Install-Guide using bash: ./configure; . ./setlibpath; make;
+	</requirement>
+	<map>grid maps</map>
+
+	<input>The approach takes raw laser range data and
+	odometry. This version is optimized for long-range laser
+	scanners like SICK LMS or PLS scanner. Short range lasers like
+	Hokuyo scanner will not work that well with the standard
+	parameter settings.</input>
+
+	<logformat> 
+	Carmen log format
+	</logformat>
+
+	<image> 
+		<url>http://www.informatik.uni-freiburg.de/~stachnis/pictures/intel3d.avi</url>
+		<thumbnailurl>http://www.informatik.uni-freiburg.de/~stachnis/pictures/intel3d.jpg</thumbnailurl>
+		<description>Nice 3d view of the best particle mapping the Intel Reserach Lab</description>
+	</image>
+	<image> 
+		<url>http://www.informatik.uni-freiburg.de/~stachnis/research/rbpfmapper/gmapper-web/freiburg-campus/fr-campus-20040714.carmen.gfs.png</url>
+		<thumbnailurl>http://www.informatik.uni-freiburg.de/~stachnis/research/rbpfmapper/gmapper-web/freiburg-campus/sfr-campus-20040714.carmen.gfs.png</thumbnailurl>
+		<description>Map of the Freiburg Campus</description>
+	</image>
+	<image> 
+		<url>http://www.informatik.uni-freiburg.de/~stachnis/research/rbpfmapper/gmapper-web/MIT/MIT_Infinite_Corridor_2002_09_11_same_floor.gfs.png</url>
+		<thumbnailurl>http://www.informatik.uni-freiburg.de/~stachnis/research/rbpfmapper/gmapper-web/MIT/sMIT_Infinite_Corridor_2002_09_11_same_floor.gfs.png</thumbnailurl>
+		<description>Map of the MIT Killian Court</description>
+	</image>
+
+	<paper>
+		<title>Improved Techniques for Grid Mapping with Rao-Blackwellized Particle Filters</title>
+		<authorlist>Giorgio Grisetti, Cyrill Stachniss, and Wolfram Burgard</authorlist>
+		<publishedin>IEEE Transactions on Robotics, Volume 23, pages 34-46</publishedin>
+		<year>2007</year>
+		<url>http://www.informatik.uni-freiburg.de/~stachnis/pdf/grisetti07tro.pdf</url>
+	</paper>
+	<paper>
+		<title>Improving Grid-based SLAM with Rao-Blackwellized Particle Filters by Adaptive Proposals and Selective Resampling</title>
+		<authorlist>Giorgio Grisetti, Cyrill Stachniss, and Wolfram Burgard</authorlist>
+		<publishedin>In Proc. of the IEEE International Conference on Robotics and Automation (ICRA)</publishedin>
+		<year>2005</year>
+		<url>http://www.informatik.uni-freiburg.de/~stachnis/pdf/grisetti05icra.pdf</url>
+	</paper>
+
+	<furtherreading> 
+		<title>On sequential simulation-based methods for bayesian filtering</title>
+		<authorlist>A. Doucet</authorlist>
+		<publishedin>Technical report, Signal Processing Group, Dept. of Engeneering, University of Cambridge</publishedin>
+		<year>1998</year>
+	</furtherreading>
+
+	<license>GMapping is licenced under the Creative Commons
+	(Attribution-NonCommercial-ShareAlike).</license>
+
+	<furthermore>
+	The SLAM approach is available as a library and
+	can be easily used as a black box. Making changes to the
+	algorithm itself, however, requires quite some C++ experience.
+	</furthermore>
+	 
+	<links>
+	  <title>French translation of this page (external link!).</title>
+	  <url>http://www.teilestore.de/edu/?p=5558</url>
+	</links>
+	<links>
+	  <title>Belorussian translation of this page (external link!).</title>
+	  <url>http://webhostingrating.com/libs/openslam-gmapping-be</url>
+	</links>
+	<links>
+	  <title>Polish translation of this page (external link!).</title>
+	  <url>http://autoersatzteile.de/blog/gmapping</url>
+	</links>
+
+
+
+</project>
